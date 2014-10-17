@@ -1,0 +1,135 @@
+application: prestashopengine
+version: 2
+runtime: php
+api_version: 1
+threadsafe: yes
+
+handlers:
+#- url: /(.*\.(htm$|html$|css$|js$))
+#  script: prestashop/\1
+
+- url: /admin/(.+)
+  script: prestashop/admin/\1
+  #secure: always
+  #login: admin
+  ##application_readable: true
+
+- url: /admin/(.+)
+  script: prestashop/admin/index.php
+  ##secure: always
+  ##application_readable: true
+
+- url: /cache/(.+)
+  script: prestashop/cache/\1
+  #secure: always
+  #application_readable: true
+
+- url: /classes/(.+)
+  script: prestashop/classes/\1
+  #secure: always
+  #application_readable: true
+
+- url: /config/(.+)
+  script: prestashop/config/\1
+  #secure: always
+  #application_readable: true
+
+- url: /controllers/(.+)
+  script: prestashop/controllers/\1
+  #secure: always
+  #application_readable: true
+
+- url: /css/(.+)
+  script: prestashop/css/\1
+  #secure: always 
+  #application_readable: true
+
+- url: /docs/(.+)
+  script: prestashop/docs/\1
+  #secure: always
+  #application_readable: true
+
+- url: /download/(.+)
+  script: prestashop/download/\1
+  #secure: always 
+  #application_readable: true
+
+- url: /img/(.+)
+  script: prestashop/img/\1
+  #secure: always
+  #application_readable: true
+
+- url: /install/(.+)
+  script: wordpress/install/\1
+  #secure: always
+  #application_readable: true
+
+- url: /js/(.+)
+  script: prestashop/js/\1
+  #secure: always
+  #application_readable: true
+
+- url: /localization/(.+)
+  script: prestashop/localization/\1
+  #secure: always
+  #application_readable: true
+
+- url: /log/(.+)
+  script: prestashop/log/\1
+  #secure: always
+  #application_readable: true
+
+- url: /mails/(.+)
+  script: prestashop/mails/\1
+  #secure: always
+  #application_readable: true
+
+- url: /modules/(.+)
+  script: prestashop/modules/\1
+  #secure: always
+  #application_readable: true
+
+- url: /override/(.+)
+  script: prestashop/override/\1
+  #secure: always
+  #application_readable: true
+
+- url: /pdf/(.+)
+  script: prestashop/pdf/\1
+  #secure: always
+  #application_readable: true
+
+- url: /test/(.+)
+  script: prestashop/test/\1
+  #secure: always
+  #application_readable: true
+
+- url: /themes/(.+)
+  script: prestashop/themes/\1
+  #secure: always
+  #application_readable: true
+
+- url: /tools/(.+)
+  script: prestashop/tools/\1
+  #secure: always
+  #application_readable: true
+
+- url: /translations/(.+)
+  script: prestashop/translations/\1
+  #secure: always
+  #application_readable: true
+
+- url: /upload/(.+)
+  script: prestashop/upload/\1
+  #secure: always
+  #application_readable: true
+
+- url: /webservice/(.+)
+  script: prestashop/webservice/\1
+  #secure: always
+  #application_readable: true
+
+- url: /(.+)?/?
+  script: prestashop/\1
+  #secure: always
+  #application_readable: true
